@@ -1,0 +1,94 @@
+[0.039s] Invoking command in '/home/yusuf/ros2_project/build/sensor_fusion': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yusuf/ros2_project/src/sensor_fusion -DCMAKE_INSTALL_PREFIX=/home/yusuf/ros2_project/install/sensor_fusion
+[0.199s] -- The C compiler identification is GNU 11.4.0
+[0.386s] -- The CXX compiler identification is GNU 11.4.0
+[0.412s] -- Detecting C compiler ABI info
+[0.644s] -- Detecting C compiler ABI info - done
+[0.678s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.678s] -- Detecting C compile features
+[0.681s] -- Detecting C compile features - done
+[0.700s] -- Detecting CXX compiler ABI info
+[1.004s] -- Detecting CXX compiler ABI info - done
+[1.044s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.048s] -- Detecting CXX compile features
+[1.049s] -- Detecting CXX compile features - done
+[1.063s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.686s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[2.087s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[2.284s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[2.310s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[2.350s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[2.406s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.485s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.707s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[2.722s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[3.043s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[3.146s] -- Found FastRTPS: /opt/ros/humble/include  
+[3.324s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.353s] -- Looking for pthread.h
+[3.631s] -- Looking for pthread.h - found
+[3.635s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.922s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[3.927s] -- Found Threads: TRUE  
+[4.214s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[4.290s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[4.405s] -- Found tf2_ros: 0.25.7 (/opt/ros/humble/share/tf2_ros/cmake)
+[4.940s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[5.042s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[5.121s] -- Found OpenCV: /usr (found version "4.5.4") 
+[5.128s] -- Found visualization_msgs: 4.2.4 (/opt/ros/humble/share/visualization_msgs/cmake)
+[5.592s] -- Configuring done
+[5.702s] -- Generating done
+[5.712s] -- Build files have been written to: /home/yusuf/ros2_project/build/sensor_fusion
+[5.755s] Invoked command in '/home/yusuf/ros2_project/build/sensor_fusion' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/yusuf/ros2_project/src/sensor_fusion -DCMAKE_INSTALL_PREFIX=/home/yusuf/ros2_project/install/sensor_fusion
+[5.760s] Invoking command in '/home/yusuf/ros2_project/build/sensor_fusion': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/sensor_fusion -- -j8 -l8
+[5.951s] [ 10%] [32mBuilding CXX object CMakeFiles/noise_kf.dir/src/noise_kf.cpp.o[0m
+[5.960s] [ 20%] [32mBuilding CXX object CMakeFiles/linear_kf.dir/src/linear_kf.cpp.o[0m
+[5.974s] [ 30%] [32mBuilding CXX object CMakeFiles/ekf_lib.dir/src/ekf_lib.cpp.o[0m
+[5.980s] [ 40%] [32mBuilding CXX object CMakeFiles/advanced_kf.dir/src/advanced_kf.cpp.o[0m
+[38.624s] [ 50%] [32m[1mLinking CXX static library libekf_lib.a[0m
+[39.583s] [ 50%] Built target ekf_lib
+[55.073s] [ 60%] [32m[1mLinking CXX executable linear_kf[0m
+[57.143s] [ 60%] Built target linear_kf
+[66.646s] [ 70%] [32m[1mLinking CXX executable advanced_kf[0m
+[68.725s] [ 70%] Built target advanced_kf
+[72.904s] [ 80%] [32m[1mLinking CXX executable noise_kf[0m
+[74.313s] [ 80%] Built target noise_kf
+[74.351s] [ 90%] [32mBuilding CXX object CMakeFiles/ekf_node.dir/src/ekf_node.cpp.o[0m
+[97.906s] [100%] [32m[1mLinking CXX executable ekf_node[0m
+[99.189s] [100%] Built target ekf_node
+[99.209s] Invoked command in '/home/yusuf/ros2_project/build/sensor_fusion' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/sensor_fusion -- -j8 -l8
+[99.276s] Invoking command in '/home/yusuf/ros2_project/build/sensor_fusion': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yusuf/ros2_project/build/sensor_fusion
+[99.289s] -- Install configuration: ""
+[99.290s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/lib/sensor_fusion/linear_kf
+[99.296s] -- Set runtime path of "/home/yusuf/ros2_project/install/sensor_fusion/lib/sensor_fusion/linear_kf" to ""
+[99.296s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/lib/sensor_fusion/advanced_kf
+[99.304s] -- Set runtime path of "/home/yusuf/ros2_project/install/sensor_fusion/lib/sensor_fusion/advanced_kf" to ""
+[99.305s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/lib/sensor_fusion/noise_kf
+[99.315s] -- Set runtime path of "/home/yusuf/ros2_project/install/sensor_fusion/lib/sensor_fusion/noise_kf" to ""
+[99.315s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/lib/sensor_fusion/ekf_node
+[99.326s] -- Set runtime path of "/home/yusuf/ros2_project/install/sensor_fusion/lib/sensor_fusion/ekf_node" to ""
+[99.327s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/launch
+[99.327s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/launch/fusion_ekf.launch.py
+[99.327s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/launch/linear_kf.launch.py
+[99.328s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/launch/tb3_ekf.launch.py
+[99.328s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/config
+[99.328s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/config/fusion2.yaml
+[99.329s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/config/tb3_ekf.yaml
+[99.329s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/config/kf.rviz
+[99.330s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/config/fusion.yaml
+[99.330s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/ament_index/resource_index/package_run_dependencies/sensor_fusion
+[99.331s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/ament_index/resource_index/parent_prefix_path/sensor_fusion
+[99.331s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/environment/ament_prefix_path.sh
+[99.331s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/environment/ament_prefix_path.dsv
+[99.331s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/environment/path.sh
+[99.332s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/environment/path.dsv
+[99.332s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/local_setup.bash
+[99.332s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/local_setup.sh
+[99.332s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/local_setup.zsh
+[99.333s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/local_setup.dsv
+[99.333s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/package.dsv
+[99.333s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/ament_index/resource_index/packages/sensor_fusion
+[99.334s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/cmake/sensor_fusionConfig.cmake
+[99.334s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/cmake/sensor_fusionConfig-version.cmake
+[99.334s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/package.xml
+[99.339s] Invoked command in '/home/yusuf/ros2_project/build/sensor_fusion' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/yusuf/ros2_project/build/sensor_fusion

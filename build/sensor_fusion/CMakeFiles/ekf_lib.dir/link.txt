@@ -1,0 +1,2 @@
+/usr/bin/ar qc libekf_lib.a CMakeFiles/ekf_lib.dir/src/ekf_lib.cpp.o
+/usr/bin/ranlib libekf_lib.a
