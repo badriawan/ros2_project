@@ -1,0 +1,23 @@
+[0.027s] Invoking command in '/home/yusuf/ros2_project/build/control_systems': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/control_systems -- -j8 -l8
+[0.101s] [35m[1mConsolidate compiler generated dependencies of target lqr_lib[0m
+[0.126s] [ 25%] Built target goal_planner
+[0.141s] [ 50%] Built target goal_linear
+[0.142s] [ 75%] Built target lqr_lib
+[0.169s] [35m[1mConsolidate compiler generated dependencies of target lqr_node[0m
+[0.207s] [ 87%] [32mBuilding CXX object CMakeFiles/lqr_node.dir/src/lqr_node.cpp.o[0m
+[4.575s] [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_node.cpp:[m[K In constructor ‘[01m[KLqrNode::LqrNode()[m[K’:
+[4.575s] [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_node.cpp:11:24:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KLqrNode[m[K’ does not have any field named ‘[01m[Kdt_[m[K’
+[4.575s]    11 |     : Node("LqrNode"), [01;31m[Kdt_[m[K(0.03), tolerance(0.8), end_controller(false),
+[4.576s]       |                        [01;31m[K^~~[m[K
+[4.630s] [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_node.cpp:[m[K In member function ‘[01m[Kvoid LqrNode::controlLoopCallback()[m[K’:
+[4.630s] [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_node.cpp:81:62:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt_[m[K’ was not declared in this scope; did you mean ‘[01m[Kdt[m[K’?
+[4.630s]    81 |   auto A = lqr_->getA(actual_state_.theta, control_input_.v, [01;31m[Kdt_[m[K);
+[4.630s]       |                                                              [01;31m[K^~~[m[K
+[4.631s]       |                                                              [32m[Kdt[m[K
+[4.695s] [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_node.cpp:100:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<State>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[4.695s]   100 |     if ([01;35m[Kcurrent_waypoint >= waypoints_.size()[m[K) {
+[4.695s]       |         [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[8.193s] gmake[2]: *** [CMakeFiles/lqr_node.dir/build.make:76: CMakeFiles/lqr_node.dir/src/lqr_node.cpp.o] Error 1
+[8.194s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/lqr_node.dir/all] Error 2
+[8.194s] gmake: *** [Makefile:146: all] Error 2
+[8.197s] Invoked command in '/home/yusuf/ros2_project/build/control_systems' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/control_systems -- -j8 -l8

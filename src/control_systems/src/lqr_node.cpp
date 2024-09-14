@@ -1,84 +1,139 @@
-#include <chrono>
-#include <functional>
-#include <memory>
-#include <string>
+#include <angles/angles.h>
 #include <cmath>
-#include "rclcpp/rclcpp.hpp"
-#include "geometry_msgs/msg/twist.hpp"
-#include "nav_msgs/msg/odometry.hpp"
-#include "LQRNode_lib.hpp"
+#include <lqr_node.hpp>
+#include <rclcpp/logging.hpp>
+#include <tuple>
+#include <vector>
 
-using namespace std::chrono_literals;
+input input_old = input(0, 0);
 
-class LQRNode : public rclcpp::Node
-{
-public:
-  LQRNode()
-  : Node("LQR_node"),horizon(1)
-  {
-    // subscriber1_ = this->create_subscription<geometry_msgs::msg::Twist>(
-    //   "cmd_vel", 10, std::bind(&LQRNode::sub_callback, this, std::placeholders::_1));
+LqrNode::LqrNode()
+    : Node("LqrNode"), dt_(0.03), tolerance(0.8), end_controller(false),
+      max_linear_velocity(0.8), max_angular_velocity(M_PI / 2),
+      current_waypoint(0), odom_received_(false) {
 
-    odom_subscriber_ = this->create_subscription<nav_msgs::msg::Odom>(
-      "odom", 10, std::bind(&LQRNode::odom_callback, this, std::placeholders::_1));
+  robot_pose_sub_ = this->create_subscription<nav_msgs::msg::Odometry>("odom", 10,
+      std::bind(&LqrNode::robotPoseCallback, this, std::placeholders::_1));
+  control_input_pub_ =this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
+  control_loop_timer_ = this->create_wall_timer(std::chrono::milliseconds(30),
+                        std::bind(&LqrNode::controlLoopCallback, this));
 
-    cmd_publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
+  Q_ << 0.8, 0, 0, 
+        0, 0.8, 0,
+        0, 0, 0.8;
 
-    // timer_ = this->create_wall_timer(
-    //   100ms, std::bind(&LQRNode::timer_callback, this));
-    waypoint_ = (1,1);
-    Q_ = (0,0,0
-          0,0,0
-          0,0,0);
+  R_ << 0.8, 0,
+        0, 0.8;
 
-    R_ = (0,0,0
-          0,0,0);
-    
-  }
+  lqr_ = std::make_unique<LQR>(Q_, R_, 100);
 
-private:
-  void odom_callback(const nav_msgs::msg::Odom::SharedPtr odom)
-  {
-    void getData();
-    void controlLQR();
-    void moveRobot();
-  }
-
-  void getData(const nav_msgs::msg::Odom::SharedPtr odom){
-
-    yaw = odom->pose.pose.orientation.z;
-    v = odom->twist.twist.linear.x;
-
-
-  }
-    
-
-    LQR(Q,R,horizon);
-    LQR.getA();
-    LQR.getB();
-    LQR.updateMatrices();
-    LQR.computeRicatti();
-    LQR.computeOptimalInput();
-  }
-
-
-    publisher_->publish(odom);
+  waypoints_ = { State(3, 3, M_PI)};
   
+  actual_state_ = State(0, 0, 0);
 
-  rclcpp::TimerBase::SharedPtr timer_;
-  rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr subscriber_;
-  rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr publisher_;
-  size_t count_;
-  double x_, y_, theta_;
-  double v_l, v_r;
-  const double L = 1.0;  // Distance between wheels
-  const double R = 0.5;  // Radius of the wheels
-};
+  optimiseHeading(waypoints_);
 
-int main(int argc, char * argv[])
-{
+  }
+
+  void LqrNode::robotPoseCallback(const nav_msgs::msg::Odometry::SharedPtr msg) {
+//define the state from odom
+  tf2::Quaternion q(msg->pose.pose.orientation.x, msg->pose.pose.orientation.y,
+                    msg->pose.pose.orientation.z, msg->pose.pose.orientation.w);
+  tf2::Matrix3x3 m(q);
+  double roll, pitch, yaw;
+  m.getRPY(roll, pitch, yaw);
+
+  actual_state_ =
+      State(msg->pose.pose.position.x, msg->pose.pose.position.y, yaw);
+  odom_received_ = true;
+}
+
+void LqrNode::controlLoopCallback() {
+
+ if (!odom_received_) {
+    RCLCPP_INFO(rclcpp::get_logger("LQR"), "Waiting for odometry message...");
+    return;
+  }
+  if (end_controller) {
+    RCLCPP_INFO(rclcpp::get_logger("LQR"), "Goal reached!");
+    control_loop_timer_->cancel();
+    return;
+  }
+
+  State desired_state = waypoints_[current_waypoint];
+  Eigen::Vector3d x_actual(actual_state_.x, actual_state_.y,
+                           actual_state_.theta);
+  Eigen::Vector3d x_desired(desired_state.x, desired_state.y,
+                            desired_state.theta);
+  state_error_ = x_actual - x_desired;
+
+  if (current_waypoint == 2) {
+    waypoints_[current_waypoint + 1] = State(-1, 3, M_PI);
+  }
+
+  RCLCPP_INFO(rclcpp::get_logger("LQR"), "Current Waypoint:=%d ",current_waypoint);
+  RCLCPP_INFO(rclcpp::get_logger("LQR"), "Actual state: x=%f, y=%f, theta=%f",x_actual(0), x_actual(1), x_actual(2));
+  RCLCPP_INFO(rclcpp::get_logger("LQR"), "Desired state: x=%f, y=%f, theta=%f",x_desired(0), x_desired(1), x_desired(2));
+  RCLCPP_INFO(rclcpp::get_logger("LQR"), "State error: x=%f, y=%f, theta=%f",state_error_(0), state_error_(1), state_error_(2));
+  RCLCPP_INFO(rclcpp::get_logger("LQR"), "Current goal: x=%f, y=%f, theta=%f",
+                waypoints_[current_waypoint].x, waypoints_[current_waypoint].y,waypoints_[current_waypoint].theta);
+
+  auto A = lqr_->getA(actual_state_.theta, control_input_.v, dt_);
+  auto B = lqr_->getB(actual_state_.theta, dt_);
+  lqr_->updateMatrices(A, B);
+  lqr_->computeRiccati(B, A);
+
+  auto u = lqr_->computeOptimalInput(state_error_);
+
+  Eigen::EigenSolver<Eigen::MatrixXd> solver(B * lqr_->K_ + A);
+  auto eigenValues = solver.eigenvalues().real();
+  RCLCPP_INFO(rclcpp::get_logger("LQR"), "Eigenvalues: %f, %f, %f",
+              eigenValues(0), eigenValues(1), eigenValues(2));
+
+  publishVelocity(
+      std::clamp(u(0), -max_linear_velocity, max_linear_velocity),
+      std::clamp(u(1), -max_angular_velocity, max_angular_velocity));
+
+  if (state_error_.norm() < tolerance) {
+    RCLCPP_INFO(rclcpp::get_logger("LQR"), "Waypoint reached!");
+    current_waypoint++;
+    if (current_waypoint >= waypoints_.size()) {
+      end_controller = true;
+      publishVelocity(0.0, 0.0);
+    }
+  }
+
+}
+void LqrNode::optimiseHeading(std::vector<State> &waypoints) {
+
+  for (size_t i = 0; i < waypoints.size() - 1; ++i) {
+    double dx = waypoints[i + 1].x - waypoints[i].x;
+    double dy = waypoints[i + 1].y - waypoints[i].y;
+    waypoints[i].theta = std::atan2(dy, dx);
+  }
+  waypoints.back().theta = waypoints[waypoints.size() - 2].theta;
+
+}
+
+
+void LqrNode::publishVelocity(double v, double w) {
+
+  geometry_msgs::msg::Twist msg;
+  msg.linear.x = v;
+  msg.angular.z = w;
+  RCLCPP_INFO(rclcpp::get_logger("LQR"), "Publishing control input: v=%f, w=%f",
+              v, w);
+  control_input_ = input(v, w);
+  input_old = input(v, w);
+  control_input_pub_->publish(msg);
+
+}
+
+
+int main(int argc, char **argv) {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<LQRNode>());
+  auto controller = std::make_shared<LqrNode>();
+  rclcpp::spin(controller);
   rclcpp::shutdown();
   return 0;
 }

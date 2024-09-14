@@ -223,6 +223,32 @@ goal_planner/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/goal_planner.dir/build.make CMakeFiles/goal_planner.dir/build
 .PHONY : goal_planner/fast
 
+#=============================================================================
+# Target rules for targets named lqr_lib
+
+# Build rule for target.
+lqr_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lqr_lib
+.PHONY : lqr_lib
+
+# fast build rule for target.
+lqr_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_lib.dir/build.make CMakeFiles/lqr_lib.dir/build
+.PHONY : lqr_lib/fast
+
+#=============================================================================
+# Target rules for targets named lqr_node
+
+# Build rule for target.
+lqr_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lqr_node
+.PHONY : lqr_node
+
+# fast build rule for target.
+lqr_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_node.dir/build.make CMakeFiles/lqr_node.dir/build
+.PHONY : lqr_node/fast
+
 src/goal_linear.o: src/goal_linear.cpp.o
 .PHONY : src/goal_linear.o
 
@@ -271,6 +297,54 @@ src/goal_planner.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/goal_planner.dir/build.make CMakeFiles/goal_planner.dir/src/goal_planner.cpp.s
 .PHONY : src/goal_planner.cpp.s
 
+src/lqr_lib.o: src/lqr_lib.cpp.o
+.PHONY : src/lqr_lib.o
+
+# target to build an object file
+src/lqr_lib.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_lib.dir/build.make CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.o
+.PHONY : src/lqr_lib.cpp.o
+
+src/lqr_lib.i: src/lqr_lib.cpp.i
+.PHONY : src/lqr_lib.i
+
+# target to preprocess a source file
+src/lqr_lib.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_lib.dir/build.make CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.i
+.PHONY : src/lqr_lib.cpp.i
+
+src/lqr_lib.s: src/lqr_lib.cpp.s
+.PHONY : src/lqr_lib.s
+
+# target to generate assembly for a file
+src/lqr_lib.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_lib.dir/build.make CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.s
+.PHONY : src/lqr_lib.cpp.s
+
+src/lqr_node.o: src/lqr_node.cpp.o
+.PHONY : src/lqr_node.o
+
+# target to build an object file
+src/lqr_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_node.dir/build.make CMakeFiles/lqr_node.dir/src/lqr_node.cpp.o
+.PHONY : src/lqr_node.cpp.o
+
+src/lqr_node.i: src/lqr_node.cpp.i
+.PHONY : src/lqr_node.i
+
+# target to preprocess a source file
+src/lqr_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_node.dir/build.make CMakeFiles/lqr_node.dir/src/lqr_node.cpp.i
+.PHONY : src/lqr_node.cpp.i
+
+src/lqr_node.s: src/lqr_node.cpp.s
+.PHONY : src/lqr_node.s
+
+# target to generate assembly for a file
+src/lqr_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lqr_node.dir/build.make CMakeFiles/lqr_node.dir/src/lqr_node.cpp.s
+.PHONY : src/lqr_node.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -288,12 +362,20 @@ help:
 	@echo "... uninstall"
 	@echo "... goal_linear"
 	@echo "... goal_planner"
+	@echo "... lqr_lib"
+	@echo "... lqr_node"
 	@echo "... src/goal_linear.o"
 	@echo "... src/goal_linear.i"
 	@echo "... src/goal_linear.s"
 	@echo "... src/goal_planner.o"
 	@echo "... src/goal_planner.i"
 	@echo "... src/goal_planner.s"
+	@echo "... src/lqr_lib.o"
+	@echo "... src/lqr_lib.i"
+	@echo "... src/lqr_lib.s"
+	@echo "... src/lqr_node.o"
+	@echo "... src/lqr_node.i"
+	@echo "... src/lqr_node.s"
 .PHONY : help
 
 

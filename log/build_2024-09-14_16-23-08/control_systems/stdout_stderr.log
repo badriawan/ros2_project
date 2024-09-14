@@ -1,0 +1,21 @@
+[35m[1mConsolidate compiler generated dependencies of target lqr_lib[0m
+[ 25%] Built target goal_planner
+[ 37%] [32mBuilding CXX object CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.o[0m
+[ 62%] Built target goal_linear
+In file included from [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_lib.cpp:1[m[K:
+[01m[K/home/yusuf/ros2_project/src/control_systems/include/lqr_lib.hpp:7:1:[m[K [01;31m[Kerror: [m[Knew types may not be defined in a return type
+    7 | [01;31m[Kclass[m[K LQR {
+      | [01;31m[K^~~~~[m[K
+[01m[K/home/yusuf/ros2_project/src/control_systems/include/lqr_lib.hpp:7:1:[m[K [01;36m[Knote: [m[K(perhaps a semicolon is missing after the definition of ‘[01m[KLQR[m[K’)
+[01m[K/home/yusuf/ros2_project/src/control_systems/include/lqr_lib.hpp:7:1:[m[K [01;31m[Kerror: [m[Kreturn type specification for constructor invalid
+[01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_lib.cpp:48:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid LQR::computeRicatti(const InputMatrix&, const StateMatrix&)[m[K’
+   48 | void [01;31m[KLQR[m[K::computeRicatti(InputMatrix const& B,StateMatrix const& A){
+      |      [01;31m[K^~~[m[K
+[01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_lib.cpp:48:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid LQR::computeRicatti(const InputMatrix&, const StateMatrix&)[m[K’
+In file included from [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_lib.cpp:1[m[K:
+[01m[K/home/yusuf/ros2_project/src/control_systems/include/lqr_lib.hpp:7:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass LQR[m[K’ defined here
+    7 | class [01;36m[KLQR[m[K {
+      |       [01;36m[K^~~[m[K
+gmake[2]: *** [CMakeFiles/lqr_lib.dir/build.make:76: CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/lqr_lib.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

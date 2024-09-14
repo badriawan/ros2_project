@@ -1,0 +1,6 @@
+[0.025s] Invoking command in '/home/yusuf/ros2_project/build/robot_sensing': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/robot_sensing -- -j8 -l8
+[0.145s] [ 25%] Built target odom_kinematic
+[0.149s] [ 50%] Built target line_following
+[0.153s] [ 75%] Built target maze_lidar
+[0.165s] [100%] Built target point_cloud_segmentation
+[0.181s] Invoked command in '/home/yusuf/ros2_project/build/robot_sensing' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/robot_sensing -- -j8 -l8

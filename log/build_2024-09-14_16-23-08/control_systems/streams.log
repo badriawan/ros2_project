@@ -1,0 +1,23 @@
+[0.028s] Invoking command in '/home/yusuf/ros2_project/build/control_systems': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/control_systems -- -j8 -l8
+[0.093s] [35m[1mConsolidate compiler generated dependencies of target lqr_lib[0m
+[0.137s] [ 25%] Built target goal_planner
+[0.139s] [ 37%] [32mBuilding CXX object CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.o[0m
+[0.151s] [ 62%] Built target goal_linear
+[1.281s] In file included from [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_lib.cpp:1[m[K:
+[1.281s] [01m[K/home/yusuf/ros2_project/src/control_systems/include/lqr_lib.hpp:7:1:[m[K [01;31m[Kerror: [m[Knew types may not be defined in a return type
+[1.281s]     7 | [01;31m[Kclass[m[K LQR {
+[1.281s]       | [01;31m[K^~~~~[m[K
+[1.281s] [01m[K/home/yusuf/ros2_project/src/control_systems/include/lqr_lib.hpp:7:1:[m[K [01;36m[Knote: [m[K(perhaps a semicolon is missing after the definition of ‘[01m[KLQR[m[K’)
+[1.281s] [01m[K/home/yusuf/ros2_project/src/control_systems/include/lqr_lib.hpp:7:1:[m[K [01;31m[Kerror: [m[Kreturn type specification for constructor invalid
+[1.296s] [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_lib.cpp:48:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid LQR::computeRicatti(const InputMatrix&, const StateMatrix&)[m[K’
+[1.296s]    48 | void [01;31m[KLQR[m[K::computeRicatti(InputMatrix const& B,StateMatrix const& A){
+[1.296s]       |      [01;31m[K^~~[m[K
+[1.296s] [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_lib.cpp:48:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid LQR::computeRicatti(const InputMatrix&, const StateMatrix&)[m[K’
+[1.296s] In file included from [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_lib.cpp:1[m[K:
+[1.297s] [01m[K/home/yusuf/ros2_project/src/control_systems/include/lqr_lib.hpp:7:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass LQR[m[K’ defined here
+[1.297s]     7 | class [01;36m[KLQR[m[K {
+[1.297s]       |       [01;36m[K^~~[m[K
+[1.585s] gmake[2]: *** [CMakeFiles/lqr_lib.dir/build.make:76: CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.o] Error 1
+[1.586s] gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/lqr_lib.dir/all] Error 2
+[1.586s] gmake: *** [Makefile:146: all] Error 2
+[1.589s] Invoked command in '/home/yusuf/ros2_project/build/control_systems' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/control_systems -- -j8 -l8

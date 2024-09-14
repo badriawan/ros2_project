@@ -1,0 +1,42 @@
+[ 25%] Built target goal_planner
+[ 50%] Built target goal_linear
+[ 75%] Built target lqr_lib
+[35m[1mConsolidate compiler generated dependencies of target lqr_node[0m
+[ 87%] [32mBuilding CXX object CMakeFiles/lqr_node.dir/src/lqr_node.cpp.o[0m
+[01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_node.cpp:[m[K In member function ‘[01m[Kvoid LqrNode::controlLoopCallback()[m[K’:
+[01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_node.cpp:100:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<State>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  100 |     if ([01;35m[Kcurrent_waypoint >= waypoints_.size()[m[K) {
+      |         [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable lqr_node[0m
+[100%] Built target lqr_node
+-- Install configuration: ""
+-- Installing: /home/yusuf/ros2_project/install/control_systems/lib/control_systems/goal_linear
+-- Set runtime path of "/home/yusuf/ros2_project/install/control_systems/lib/control_systems/goal_linear" to ""
+-- Installing: /home/yusuf/ros2_project/install/control_systems/lib/control_systems/goal_planner
+-- Set runtime path of "/home/yusuf/ros2_project/install/control_systems/lib/control_systems/goal_planner" to ""
+-- Installing: /home/yusuf/ros2_project/install/control_systems/lib/control_systems/lqr_node
+-- Set runtime path of "/home/yusuf/ros2_project/install/control_systems/lib/control_systems/lqr_node" to ""
+-- Installing: /home/yusuf/ros2_project/install/control_systems/lib/control_systems/liblqr_lib.a
+-- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/launch
+-- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/launch/velocity_controller.launch.py
+-- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/urdf
+-- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/urdf/diff_drive_vel.urdf
+-- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/urdf/diff_sens.urdf
+-- Installing: /home/yusuf/ros2_project/install/control_systems/share/control_systems/config
+-- Installing: /home/yusuf/ros2_project/install/control_systems/share/control_systems/config/control.perspective
+-- Installing: /home/yusuf/ros2_project/install/control_systems/share/control_systems/config/diff_controller.yaml
+-- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/ament_index/resource_index/package_run_dependencies/control_systems
+-- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/ament_index/resource_index/parent_prefix_path/control_systems
+-- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/environment/ament_prefix_path.sh
+-- Installing: /home/yusuf/ros2_project/install/control_systems/share/control_systems/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/environment/path.sh
+-- Installing: /home/yusuf/ros2_project/install/control_systems/share/control_systems/environment/path.dsv
+-- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/local_setup.bash
+-- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/local_setup.sh
+-- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/local_setup.zsh
+-- Installing: /home/yusuf/ros2_project/install/control_systems/share/control_systems/local_setup.dsv
+-- Installing: /home/yusuf/ros2_project/install/control_systems/share/control_systems/package.dsv
+-- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/ament_index/resource_index/packages/control_systems
+-- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/cmake/control_systemsConfig.cmake
+-- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/cmake/control_systemsConfig-version.cmake
+-- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/package.xml

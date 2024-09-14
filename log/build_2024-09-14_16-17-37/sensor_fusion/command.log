@@ -1,0 +1,1 @@
+Invoking command in '/home/yusuf/ros2_project/build/sensor_fusion': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/sensor_fusion -- -j8 -l8

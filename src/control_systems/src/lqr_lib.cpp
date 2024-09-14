@@ -7,7 +7,7 @@ LQR::LQR(StateMatrix const& Q,InputMatrix const& R, int horizon):Q_(Q),R_(R),hor
     Q_ = StateMatrix::Zero(3,3);
     R_ = InputMatrix::Zero(3,2);
     P_ = Q_;
-    K_ = StateMatrix::Zero(B_.cols(),A_.rows())
+    K_ = StateMatrix::Zero(B_.cols(),A_.rows());
 
 }
 
@@ -45,7 +45,7 @@ void LQR::updateMatrices(StateMatrix const& A,InputMatrix const& B){
 
 }
 
-void LQR::computeRicatti(InputMatrix const& B,StateMatrix const& A){
+void LQR::computeRiccati(InputMatrix const& B,StateMatrix const& A){
 //compute the ricatti and get P and K
 
     P_ = Q_;

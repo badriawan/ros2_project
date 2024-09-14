@@ -1,0 +1,3 @@
+[ 12%] [32mBuilding CXX object CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.o[0m
+[ 62%] Built target goal_planner
+[ 62%] Built target goal_linear

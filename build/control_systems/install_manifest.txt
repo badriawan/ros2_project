@@ -1,8 +1,12 @@
 /home/yusuf/ros2_project/install/control_systems/lib/control_systems/goal_linear
 /home/yusuf/ros2_project/install/control_systems/lib/control_systems/goal_planner
+/home/yusuf/ros2_project/install/control_systems/lib/control_systems/lqr_node
+/home/yusuf/ros2_project/install/control_systems/lib/control_systems/liblqr_lib.a
 /home/yusuf/ros2_project/install/control_systems/share/control_systems/launch/velocity_controller.launch.py
 /home/yusuf/ros2_project/install/control_systems/share/control_systems/urdf/diff_drive_vel.urdf
 /home/yusuf/ros2_project/install/control_systems/share/control_systems/urdf/diff_sens.urdf
+/home/yusuf/ros2_project/install/control_systems/share/control_systems/config/control.perspective
+/home/yusuf/ros2_project/install/control_systems/share/control_systems/config/diff_controller.yaml
 /home/yusuf/ros2_project/install/control_systems/share/ament_index/resource_index/package_run_dependencies/control_systems
 /home/yusuf/ros2_project/install/control_systems/share/ament_index/resource_index/parent_prefix_path/control_systems
 /home/yusuf/ros2_project/install/control_systems/share/control_systems/environment/ament_prefix_path.sh

@@ -1,0 +1,7 @@
+[01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_lib.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Klqr_lib.hpp: No such file or directory
+    1 | #include [01;31m[K"lqr_lib.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/lqr_lib.dir/build.make:76: CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/lqr_lib.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

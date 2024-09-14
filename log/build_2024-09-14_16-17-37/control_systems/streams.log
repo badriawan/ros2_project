@@ -1,0 +1,12 @@
+[0.027s] Invoking command in '/home/yusuf/ros2_project/build/control_systems': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/control_systems -- -j8 -l8
+[0.123s] [ 12%] [32mBuilding CXX object CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.o[0m
+[0.137s] [ 62%] Built target goal_planner
+[0.138s] [ 62%] Built target goal_linear
+[0.159s] [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_lib.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Klqr_lib.hpp: No such file or directory
+[0.160s]     1 | #include [01;31m[K"lqr_lib.hpp"[m[K
+[0.160s]       |          [01;31m[K^~~~~~~~~~~~~[m[K
+[0.160s] compilation terminated.
+[0.162s] gmake[2]: *** [CMakeFiles/lqr_lib.dir/build.make:76: CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.o] Error 1
+[0.162s] gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/lqr_lib.dir/all] Error 2
+[0.162s] gmake: *** [Makefile:146: all] Error 2
+[0.166s] Invoked command in '/home/yusuf/ros2_project/build/control_systems' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/control_systems -- -j8 -l8

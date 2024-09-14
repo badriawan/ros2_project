@@ -1,0 +1,17 @@
+[0.026s] Invoking command in '/home/yusuf/ros2_project/build/control_systems': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/control_systems -- -j8 -l8
+[0.090s] [35m[1mConsolidate compiler generated dependencies of target lqr_lib[0m
+[0.125s] [ 25%] Built target goal_linear
+[0.125s] [ 50%] Built target goal_planner
+[0.127s] [ 62%] [32mBuilding CXX object CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.o[0m
+[1.271s] [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_lib.cpp:48:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid LQR::computeRicatti(const InputMatrix&, const StateMatrix&)[m[K’
+[1.271s]    48 | void [01;31m[KLQR[m[K::computeRicatti(InputMatrix const& B,StateMatrix const& A){
+[1.271s]       |      [01;31m[K^~~[m[K
+[1.271s] [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_lib.cpp:48:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid LQR::computeRicatti(const InputMatrix&, const StateMatrix&)[m[K’
+[1.271s] In file included from [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_lib.cpp:1[m[K:
+[1.271s] [01m[K/home/yusuf/ros2_project/src/control_systems/include/lqr_lib.hpp:7:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass LQR[m[K’ defined here
+[1.271s]     7 | class [01;36m[KLQR[m[K {
+[1.271s]       |       [01;36m[K^~~[m[K
+[1.560s] gmake[2]: *** [CMakeFiles/lqr_lib.dir/build.make:76: CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.o] Error 1
+[1.560s] gmake[1]: *** [CMakeFiles/Makefile2:195: CMakeFiles/lqr_lib.dir/all] Error 2
+[1.561s] gmake: *** [Makefile:146: all] Error 2
+[1.563s] Invoked command in '/home/yusuf/ros2_project/build/control_systems' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/control_systems -- -j8 -l8

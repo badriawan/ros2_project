@@ -1,0 +1,4 @@
+[35m[1mConsolidate compiler generated dependencies of target lqr_lib[0m
+[ 25%] Built target goal_planner
+[ 37%] [32mBuilding CXX object CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.o[0m
+[ 62%] Built target goal_linear

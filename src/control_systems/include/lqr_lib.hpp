@@ -21,7 +21,7 @@ class LQR {
 
     LQR(StateMatrix const& Q,InputMatrix const& R, int horizon);
 
-    StateMatrix getA(double yaw,double v.double dt);
+    StateMatrix getA(double yaw,double v,double dt);
     InputMatrix getB(double yaw,double dt);
     void updateMatrices(StateMatrix const& A,InputMatrix const& B);
 
@@ -40,6 +40,6 @@ class LQR {
     StateMatrix P_;
     int horizon_;
 
-}
+};
 
 #endif // LQR_HPP

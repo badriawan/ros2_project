@@ -1,0 +1,4 @@
+[ 25%] Built target odom_kinematic
+[ 50%] Built target line_following
+[ 75%] Built target maze_lidar
+[100%] Built target point_cloud_segmentation

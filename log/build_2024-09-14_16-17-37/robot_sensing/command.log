@@ -1,0 +1,2 @@
+Invoking command in '/home/yusuf/ros2_project/build/robot_sensing': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/robot_sensing -- -j8 -l8
+Invoked command in '/home/yusuf/ros2_project/build/robot_sensing' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/robot_sensing -- -j8 -l8
