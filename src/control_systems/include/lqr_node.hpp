@@ -10,7 +10,6 @@
 #include <lqr_lib.hpp>
 #include <vector>
 
-
 struct State {
 
     double x;
@@ -18,8 +17,7 @@ struct State {
     double theta;
 
     State() = default;
-    State(double x_,double y_, double theta_) : x(x_), y(y_), theta(theta_) {}
-
+    State(double x_, double y_, double theta_) : x(x_), y(y_), theta(theta_) {}
 
 };
 
@@ -29,9 +27,9 @@ struct input {
     double w;
 
     input() = default;
-    input(double v_,double w_) : v(v_),w(w_) {}
-};
+    input(double v_, double w_) : v(v_), w(w_) {}
 
+};
 
 class LqrNode : public rclcpp::Node {
 public:
@@ -41,10 +39,9 @@ private:
 
     void robotPoseCallback(const nav_msgs::msg::Odometry::SharedPtr msg);
     void controlLoopCallback();
-    void publishVelocity(double v,double w);
+    void publishVelocity(double v, double w);
     void optimiseHeading(std::vector<State>& waypoints);
     void angleNormalisation(double& angle);
-
 
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr robot_pose_sub_;
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr control_input_pub_;
@@ -67,7 +64,6 @@ private:
     bool odom_received_;
 
     std::unique_ptr<LQR> lqr_;
-
 };
 
 #endif

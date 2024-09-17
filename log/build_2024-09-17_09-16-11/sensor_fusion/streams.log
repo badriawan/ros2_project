@@ -1,0 +1,38 @@
+[0.143s] Invoking command in '/home/yusuf/ros2_project/build/sensor_fusion': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/sensor_fusion -- -j8 -l8
+[0.674s] [ 20%] Built target ekf_lib
+[0.740s] [ 40%] Built target linear_kf
+[0.762s] [ 60%] Built target noise_kf
+[0.803s] [ 80%] Built target advanced_kf
+[0.932s] [100%] Built target ekf_node
+[1.013s] Invoked command in '/home/yusuf/ros2_project/build/sensor_fusion' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/sensor_fusion -- -j8 -l8
+[1.286s] Invoking command in '/home/yusuf/ros2_project/build/sensor_fusion': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/yusuf/ros2_project/build/sensor_fusion
+[1.347s] -- Install configuration: ""
+[1.355s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/lib/sensor_fusion/linear_kf
+[1.357s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/lib/sensor_fusion/advanced_kf
+[1.367s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/lib/sensor_fusion/noise_kf
+[1.396s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/lib/sensor_fusion/ekf_node
+[1.398s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/launch
+[1.403s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/launch/fusion_ekf.launch.py
+[1.405s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/launch/linear_kf.launch.py
+[1.406s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/launch/tb3_ekf.launch.py
+[1.407s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/config
+[1.408s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/config/fusion2.yaml
+[1.409s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/config/tb3_ekf.yaml
+[1.409s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/config/kf.rviz
+[1.410s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/config/fusion.yaml
+[1.410s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/ament_index/resource_index/package_run_dependencies/sensor_fusion
+[1.410s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/ament_index/resource_index/parent_prefix_path/sensor_fusion
+[1.411s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/environment/ament_prefix_path.sh
+[1.411s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/environment/ament_prefix_path.dsv
+[1.412s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/environment/path.sh
+[1.413s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/environment/path.dsv
+[1.419s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/local_setup.bash
+[1.420s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/local_setup.sh
+[1.422s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/local_setup.zsh
+[1.427s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/local_setup.dsv
+[1.427s] -- Installing: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/package.dsv
+[1.428s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/ament_index/resource_index/packages/sensor_fusion
+[1.429s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/cmake/sensor_fusionConfig.cmake
+[1.429s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/cmake/sensor_fusionConfig-version.cmake
+[1.433s] -- Up-to-date: /home/yusuf/ros2_project/install/sensor_fusion/share/sensor_fusion/package.xml
+[1.436s] Invoked command in '/home/yusuf/ros2_project/build/sensor_fusion' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/yusuf/ros2_project/build/sensor_fusion

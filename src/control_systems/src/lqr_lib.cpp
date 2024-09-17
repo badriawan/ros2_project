@@ -1,30 +1,25 @@
 #include "lqr_lib.hpp"
 
-LQR::LQR(StateMatrix const& Q,InputMatrix const& R, int horizon):Q_(Q),R_(R),horizon_(horizon){
-//constructor to define the variables
-    A_ = StateMatrix::Zero(3,3);
-    B_ = InputMatrix::Zero(3,2);
-    Q_ = StateMatrix::Zero(3,3);
-    R_ = InputMatrix::Zero(3,2);
+LQR::LQR(StateMatrix const& Q, InputMatrix const& R, int horizon): Q_(Q), R_(R), horizon_(horizon) {
+
+    A_ = StateMatrix::Zero(3, 3);
+    B_ = InputMatrix::Zero(3, 2);
     P_ = Q_;
-    K_ = StateMatrix::Zero(B_.cols(),A_.rows());
+    K_ = StateMatrix::Zero(B_.cols(), A_.rows());
 
 }
 
-LQR::StateMatrix LQR::getA(double yaw,double v,double dt){
-//logic to define the transition dynamical matrix A
+LQR::StateMatrix LQR::getA(double yaw, double v, double dt) {
 
     StateMatrix A(3, 3);
     A << 1, 0, -v * sin(yaw) * dt,
          0, 1, v * cos(yaw) * dt,
          0, 0, 1;
     return A;
+
 }
 
-
-
-//logic to define the controller input matrix B
-LQR::InputMatrix LQR::getB(double yaw, double dt) {
+LQR::StateMatrix LQR::getB(double yaw, double dt) {
 
     InputMatrix B(3, 2);
     B << cos(yaw) * dt, 0,
@@ -34,19 +29,14 @@ LQR::InputMatrix LQR::getB(double yaw, double dt) {
 
 }
 
-
-
-void LQR::updateMatrices(StateMatrix const& A,InputMatrix const& B){
-//logic to updating the matrix
-
+void LQR::updateMatrices(StateMatrix const& A, InputMatrix const& B) {
 
     A_ = A;
     B_ = B;
 
 }
 
-void LQR::computeRiccati(InputMatrix const& B,StateMatrix const& A){
-//compute the ricatti and get P and K
+void LQR::computeRiccati(InputMatrix B, StateMatrix A) {
 
     P_ = Q_;
     B_ = B;
@@ -66,17 +56,10 @@ void LQR::computeRiccati(InputMatrix const& B,StateMatrix const& A){
 
 }
 
-
-
-LQR::InputVector LQR::computeOptimalInput(StateVector const& state_error){
-//compute u as an input then convert it to vector . The input are velocity linear and angular
+LQR::InputVector LQR::computeOptimalInput(StateVector const& state_error) {
 
     InputVector u = -K_ * state_error;
     return u;
 
+
 }
-
-
-
-
-

@@ -1,0 +1,34 @@
+[0.111s] Invoking command in '/home/yusuf/ros2_project/build/robot_sensing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/robot_sensing -- -j8 -l8
+[0.661s] [ 25%] Built target odom_kinematic
+[0.674s] [ 50%] Built target line_following
+[0.678s] [ 75%] Built target maze_lidar
+[0.710s] [100%] Built target point_cloud_segmentation
+[0.791s] Invoked command in '/home/yusuf/ros2_project/build/robot_sensing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/robot_sensing -- -j8 -l8
+[1.109s] Invoking command in '/home/yusuf/ros2_project/build/robot_sensing': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/yusuf/ros2_project/build/robot_sensing
+[1.178s] -- Install configuration: ""
+[1.179s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/lib/robot_sensing/maze_lidar
+[1.192s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/lib/robot_sensing/odom_kinematic
+[1.195s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/lib/robot_sensing/line_following
+[1.205s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/lib/robot_sensing/point_cloud_segmentation
+[1.206s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/launch
+[1.212s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/launch/maze_world.launch.py
+[1.213s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/launch/line_world.launch.py
+[1.214s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/world
+[1.217s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/world/maze.world
+[1.218s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/world/linefollowing.world
+[1.226s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/ament_index/resource_index/package_run_dependencies/robot_sensing
+[1.227s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/ament_index/resource_index/parent_prefix_path/robot_sensing
+[1.228s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/environment/ament_prefix_path.sh
+[1.229s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/environment/ament_prefix_path.dsv
+[1.233s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/environment/path.sh
+[1.234s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/environment/path.dsv
+[1.234s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/local_setup.bash
+[1.242s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/local_setup.sh
+[1.243s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/local_setup.zsh
+[1.243s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/local_setup.dsv
+[1.244s] -- Installing: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/package.dsv
+[1.255s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/ament_index/resource_index/packages/robot_sensing
+[1.256s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/cmake/robot_sensingConfig.cmake
+[1.257s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/cmake/robot_sensingConfig-version.cmake
+[1.258s] -- Up-to-date: /home/yusuf/ros2_project/install/robot_sensing/share/robot_sensing/package.xml
+[1.259s] Invoked command in '/home/yusuf/ros2_project/build/robot_sensing' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/yusuf/ros2_project/build/robot_sensing

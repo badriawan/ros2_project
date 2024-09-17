@@ -1,0 +1,46 @@
+[0.028s] Invoking command in '/home/yusuf/ros2_project/build/control_systems': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/control_systems -- -j8 -l8
+[0.138s] [ 25%] Built target goal_linear
+[0.144s] [ 50%] Built target goal_planner
+[0.154s] [ 62%] [32mBuilding CXX object CMakeFiles/lqr_lib.dir/src/lqr_lib.cpp.o[0m
+[14.004s] [ 75%] [32m[1mLinking CXX static library liblqr_lib.a[0m
+[14.258s] [ 75%] Built target lqr_lib
+[14.276s] [35m[1mConsolidate compiler generated dependencies of target lqr_node[0m
+[14.307s] [ 87%] [32mBuilding CXX object CMakeFiles/lqr_node.dir/src/lqr_node.cpp.o[0m
+[19.746s] [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_node.cpp:[m[K In member function ‘[01m[Kvoid LqrNode::controlLoopCallback()[m[K’:
+[19.747s] [01m[K/home/yusuf/ros2_project/src/control_systems/src/lqr_node.cpp:104:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<State>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[19.747s]   104 |     if ([01;35m[Kcurrent_waypoint >= waypoints_.size()[m[K) {
+[19.747s]       |         [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[38.105s] [100%] [32m[1mLinking CXX executable lqr_node[0m
+[39.663s] [100%] Built target lqr_node
+[39.684s] Invoked command in '/home/yusuf/ros2_project/build/control_systems' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/yusuf/ros2_project/build/control_systems -- -j8 -l8
+[39.750s] Invoking command in '/home/yusuf/ros2_project/build/control_systems': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/yusuf/ros2_project/build/control_systems
+[39.763s] -- Install configuration: ""
+[39.763s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/lib/control_systems/goal_linear
+[39.764s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/lib/control_systems/goal_planner
+[39.765s] -- Installing: /home/yusuf/ros2_project/install/control_systems/lib/control_systems/lqr_node
+[39.784s] -- Set runtime path of "/home/yusuf/ros2_project/install/control_systems/lib/control_systems/lqr_node" to ""
+[39.784s] -- Installing: /home/yusuf/ros2_project/install/control_systems/lib/control_systems/liblqr_lib.a
+[39.806s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/launch
+[39.806s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/launch/velocity_controller.launch.py
+[39.807s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/urdf
+[39.807s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/urdf/diff_drive_vel.urdf
+[39.807s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/urdf/diff_sens.urdf
+[39.808s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/config
+[39.808s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/config/control.perspective
+[39.808s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/config/diff_controller.yaml
+[39.808s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/ament_index/resource_index/package_run_dependencies/control_systems
+[39.809s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/ament_index/resource_index/parent_prefix_path/control_systems
+[39.809s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/environment/ament_prefix_path.sh
+[39.809s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/environment/ament_prefix_path.dsv
+[39.809s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/environment/path.sh
+[39.809s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/environment/path.dsv
+[39.810s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/local_setup.bash
+[39.810s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/local_setup.sh
+[39.810s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/local_setup.zsh
+[39.810s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/local_setup.dsv
+[39.810s] -- Installing: /home/yusuf/ros2_project/install/control_systems/share/control_systems/package.dsv
+[39.811s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/ament_index/resource_index/packages/control_systems
+[39.811s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/cmake/control_systemsConfig.cmake
+[39.812s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/cmake/control_systemsConfig-version.cmake
+[39.812s] -- Up-to-date: /home/yusuf/ros2_project/install/control_systems/share/control_systems/package.xml
+[39.813s] Invoked command in '/home/yusuf/ros2_project/build/control_systems' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/yusuf/ros2_project/build/control_systems

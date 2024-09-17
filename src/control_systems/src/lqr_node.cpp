@@ -27,7 +27,7 @@ LqrNode::LqrNode()
 
   lqr_ = std::make_unique<LQR>(Q_, R_, 100);
 
-  waypoints_ = { State(3, 3, M_PI)};
+  waypoints_ = {State(3, 3, M_PI / 4)};
   
   actual_state_ = State(0, 0, 0);
 
