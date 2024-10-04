@@ -65,7 +65,7 @@ void LqrNode::controlLoopCallback() {
                            actual_state_.theta);
   Eigen::Vector3d x_desired(desired_state.x, desired_state.y,
                             desired_state.theta);
-  state_error_ = x_actual - x_desired;
+  state_error_ = x_actual - x_desired; //goal destination
 
   if (current_waypoint == 2) {
     waypoints_[current_waypoint + 1] = State(-1, 3, M_PI);

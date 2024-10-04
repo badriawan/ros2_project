@@ -58,7 +58,7 @@ void LQR::computeRiccati(InputMatrix B, StateMatrix A) {
 
 LQR::InputVector LQR::computeOptimalInput(StateVector const& state_error) {
 
-    InputVector u = -K_ * state_error;
+    InputVector u = -K_ * state_error; //this is the core concept
     return u;
 
 

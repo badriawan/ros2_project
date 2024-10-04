@@ -36,7 +36,7 @@ public:
     void update(double measurement_x,double measurement_y){
 
     double K = P / (P + R); //Kalman gain
-    X = X + K * (measurement_x - X);
+    X = X + K * (measurement_x - X); //this is the core concept
     Y = Y + K * (measurement_y - Y);
     P = (1 - K) * P;
 }
