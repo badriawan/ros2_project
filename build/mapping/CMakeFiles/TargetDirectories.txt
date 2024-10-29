@@ -1,0 +1,9 @@
+/home/yusuf/ros2_project/build/mapping/CMakeFiles/uninstall.dir
+/home/yusuf/ros2_project/build/mapping/CMakeFiles/mapping_uninstall.dir
+/home/yusuf/ros2_project/build/mapping/CMakeFiles/test.dir
+/home/yusuf/ros2_project/build/mapping/CMakeFiles/edit_cache.dir
+/home/yusuf/ros2_project/build/mapping/CMakeFiles/rebuild_cache.dir
+/home/yusuf/ros2_project/build/mapping/CMakeFiles/list_install_components.dir
+/home/yusuf/ros2_project/build/mapping/CMakeFiles/install.dir
+/home/yusuf/ros2_project/build/mapping/CMakeFiles/install/local.dir
+/home/yusuf/ros2_project/build/mapping/CMakeFiles/install/strip.dir
